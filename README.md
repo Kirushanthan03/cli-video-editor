@@ -28,8 +28,20 @@ pip install -r requirements.txt
 ## Usage
 
 ### Run Automated Pipeline
+
+#### Single Video Mode:
 ```bash
 python3 pipeline/auto_editor.py --raw raw/input_video.mp4 --theme cyber_neon --speed 1.18
+```
+
+#### Multi-Reference Mode (B-roll + Speaker PiP):
+Drop any number of reference videos into `reference/` (auto-detected), or pass them explicitly:
+```bash
+python3 pipeline/auto_editor.py \
+  --raw raw/my_talk.mp4 \
+  --ref reference/app_demo.mp4 reference/benchmark.mp4 reference/screencast.mp4 \
+  --theme cyber_neon \
+  --speed 1.18
 ```
 
 ### CLI Options
@@ -37,6 +49,7 @@ python3 pipeline/auto_editor.py --raw raw/input_video.mp4 --theme cyber_neon --s
 | Option | Description | Default |
 | :--- | :--- | :--- |
 | `--raw`, `-i` | Path to raw input video | Required |
+| `--ref`, `-r` | One or more reference video paths for PiP B-roll | Auto-detects `reference/*` |
 | `--output`, `-o` | Output file path | `exports/<basename>_master.mp4` |
 | `--speed`, `-s` | Playback speed multiplier | `1.18` |
 | `--theme`, `-t` | Visual style (`cyber_neon`, `apple_keynote`, `vox_editorial`, `fintech_emerald`) | `cyber_neon` |
@@ -56,10 +69,13 @@ python3 pipeline/auto_editor.py --raw raw/input_video.mp4 --theme cyber_neon --s
 ├── pipeline/            # End-to-end orchestration
 │   ├── auto_editor.py   # Main CLI runner
 │   ├── speech_analyzer.py # Silence detection and faster-whisper transcription
-│   └── visual_director.py # Semantic cue planning
+│   ├── visual_director.py # Semantic cue planning
+│   └── reference_matcher.py # Multi-reference scene slicing & PiP camera
 ├── presets/
 │   └── subtitles/       # Reusable ASS subtitle formatting
 ├── docs/                # Architecture and workflow documentation
+│   ├── index.html       # Visual beginner-friendly user guide
+│   └── GENERALIZED_WORKFLOW.md
 └── requirements.txt
 ```
 

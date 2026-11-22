@@ -259,15 +259,22 @@
     <!-- 1. QUICK START -->
     <div class="card quick-start-box">
       <h2 style="margin-bottom: 8px; font-size: 1.4rem;">⚡ Quick Start (1-Minute Guide)</h2>
-      <p style="color: #c9d1d9; font-size: 0.95rem;">Drop any video into the <code>raw/</code> folder and run this single command:</p>
+      <p style="color: #c9d1d9; font-size: 0.95rem;">Drop your talking-head camera video into <code>raw/</code> and any reference B-roll videos into <code>reference/</code>:</p>
       
+      <p style="margin-top: 14px; font-size: 0.85rem; color: var(--accent); font-weight: 600;">Option A: Auto-Detect (Single or Multiple References)</p>
       <div class="code-container">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
         <pre><code>python3 pipeline/auto_editor.py --raw raw/my_video.mp4 --theme cyber_neon --speed 1.18</code></pre>
       </div>
 
-      <p style="font-size: 0.88rem; color: var(--text-muted);">
-        ✨ That's it! Your finished reel will be exported directly into <code>exports/my_video_master.mp4</code>.
+      <p style="margin-top: 10px; font-size: 0.85rem; color: var(--accent-gold); font-weight: 600;">Option B: Explicit Multi-Reference Paths</p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        <pre><code>python3 pipeline/auto_editor.py --raw raw/my_talk.mp4 --ref reference/app_demo.mp4 reference/benchmark.mp4 reference/code.mp4</code></pre>
+      </div>
+
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 10px;">
+        ✨ <strong>What happens</strong>: The engine extracts the best visual cuts from every reference video, strips reference audio 100%, and floats the creator in a glowing Picture-in-Picture (PiP) bubble during cuts.
       </p>
     </div>
 
