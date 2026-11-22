@@ -2,6 +2,8 @@
 
 An automated command-line video editing workstation that converts raw video footage into vertical 9:16 social reels (1080x1920 Full HD @ 30fps) with frame-accurate subtitles, procedural vector motion graphics, and mastered dialogue audio.
 
+> 📖 **Beginner-Friendly Visual Guide**: Open [`docs/index.html`](docs/index.html) in your browser for a visual interactive walkthrough of the pipeline, theme previews, and CLI options.
+
 ## Features
 
 - **Automated Silence Detection**: Detects dead air at start/end and trims automatically.
