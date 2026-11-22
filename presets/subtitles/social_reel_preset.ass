@@ -1,0 +1,16 @@
+[Script Info]
+Title: Antigravity Social Reel Subtitle Preset
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial Black,54,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5.0,0,2,40,40,280,1
+Style: Accent,Arial Black,58,&H0018EAFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5.5,0,2,40,40,280,1
+Style: GreenAccent,Arial Black,58,&H0030FF80,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5.5,0,2,40,40,280,1
+Style: RedAccent,Arial Black,58,&H003030FF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5.5,0,2,40,40,280,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
